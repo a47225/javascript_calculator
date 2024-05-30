@@ -1,38 +1,120 @@
+body{
+  background-color: #282c34;
+  color: white;
+  font-size: 1.5em;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#calculator{
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  margin: 300px auto;
+  margin-bottom: 0;
+  padding: 20px;
+  background-color: #333;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.display{
+  width: 100%;
+  height: 100px;
+  background-color: #444;
+  border-radius: 10px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: flex-end;
+  align-items: flex-end;
+  font-size: 1em;
+  overflow: hidden;
+}
+
+.display p:first-child{
+  color: orange;
+}
+
+.display p{
+  margin: 0;
+  padding: 10px;
+}
+
+#keyboard{
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  margin-top: 10px;
+}
+
+.clear{
+  grid-column: span 2;
+  background-color: red;
+}
+
+.clear:hover{
+  background-color: darkred;
+}
+
+.clear:active{
+  background-color: orangered;
+}
+
+.equal{
+  grid-row: span 2;
+  background-color: orange;
+}
+
+.equal:hover{
+  background-color: darkorange;
+}
+
+.equal:active{
+  background-color: orangered;
+}
+
+#zero{
+  grid-column: span 2;
+}
+
+
+.operator{
+  background-color: antiquewhite;
+  color: black;
+}
+
+.operator:hover{
+  background-color: #ccc;
+}
+
+.operator:active{
+  background-color: #aaa;
+}
+
+button{
+  background-color: #555;
   color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 1.5em;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+button:hover{
+  background-color: #666;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button:active{
+  background-color: #777;
 }
+
